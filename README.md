@@ -23,9 +23,11 @@ Then in the `scripts` field of package.json, add
 "test": "node ./node_modules/.bin/istanbul cover test.js && ./node_modules/.bin/codecov"
 ```
 
+Let's break down what's happening in this command. Firstly, with `node ./node_modules/.bin/istanbul cover test.js` we are running the istanbul code coverage generator on the `test.js` file. See [this](https://github.com/dwyl/learn-istanbul) tutorial for more on how Istanbul works.
 
+If that executes successfully, the `codecov` script is executed. It will scan for code coverage reports and then send them off to the CodeCov API.
 
-Where `test.js` is the path to some script for which you want to generate code coverage statistics. Our `test.js` is currently a trivial script:
+Just for reference, you can see our (rather trivial) `test.js` file below.
 
 ```javascript
 var x = 1, z;
