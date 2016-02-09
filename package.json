@@ -4,7 +4,7 @@
   "description": "Example repository to hook up to CodeCov",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/.bin/istanbul cover test.js"
+    "test": "node ./node_modules/.bin/istanbul cover test.js && ./node_modules/.bin/codecov"
   },
   "repository": {
     "type": "git",
